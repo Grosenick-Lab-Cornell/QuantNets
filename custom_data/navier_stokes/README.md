@@ -41,9 +41,17 @@ The main function, `load_flow_graph`, converts the fluid data into graph format 
 
 Finally, it saves the processed graph data list to `vel_x_graph.pt`.
 
+## Data Download
+
+You can download the required dataset from the following link:
+
+[Download Dataset](https://wcm.box.com/s/s13vbg8hrjag6zar8ubmibxrf4glefmu)
+
+Place the downloaded files in the `./datasets` directory before running the code.
+
 ## Usage
 
-1. **Prepare the dataset**: Ensure that `vel_x.npy`, `refined_edges`, and `position.npy` are in the `./datasets` directory.
+1. **Prepare the dataset**: Download the data from the link above and place `vel_x.npy`, `refined_edges`, and `position.npy` in the `./datasets` directory.
 2. **Run the code**: Execute the script to generate the graph data.
 3. **Load the graph data**: The processed graph data is saved to `vel_x_graph.pt` and can be loaded using `torch.load('vel_x_graph.pt')`.
 
