@@ -1,0 +1,202 @@
+##############################################################################################################################################################################################
+######################################################################### DATASETS WITH POSITIONAL DESCRIPTORS DATASETS ######################################################################
+##############################################################################################################################################################################################
+navier_stokes_binary:
+  dataset_group: custom
+  dataset_name: navier_stokes_binary
+  layers_num: 3
+  out_dim: 10 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 1 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: 2
+  edge_attr_dim: -1
+  # Model specific params
+  # SGCN & QGRN models
+  sgcn_hidden_sf: 2 
+  sgcn_out_sf: 1 
+  sgcn_hidden_size: 6
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+      train_100_test_20: https://dl.dropboxusercontent.com/scl/fi/makidt3vilviwlgpea5ji/navier_stokes_binary.pkl?rlkey=qe6x025zr525nfeh5okbgsyek&dl=0
+      train_1000_test_200: https://dl.dropboxusercontent.com/scl/fi/1vnzlgqijietc6zgw3zsh/navier_stokes_binary.pkl?rlkey=z0nvx949jjk5g2t1fyjw0aqes&dl=0
+      train_10000_test_1000: https://dl.dropboxusercontent.com/scl/fi/nw05b3glgjo5yd7mfq7vo/navier_stokes_binary.pkl?rlkey=a9034j6i91x6pu6fadztjests&dl=0
+
+navier_stokes_denary_1: 
+  dataset_group: custom
+  dataset_name: navier_stokes_denary_1
+  layers_num: 3
+  out_dim: 10 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 1 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: 2
+  edge_attr_dim: -1
+  # Model specific params
+  # SGCN & QGRN models
+  sgcn_hidden_sf: 2 
+  sgcn_out_sf: 1 
+  sgcn_hidden_size: 6
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+      train_100_test_20: https://dl.dropboxusercontent.com/scl/fi/poyc8hl05hyczm216s27t/navier_stokes_denary_1.pkl?rlkey=orx0p40mblec7klh9ab4z8res&dl=0
+      train_1000_test_200: https://dl.dropboxusercontent.com/scl/fi/ssagn1wjlc2jukns7zrnm/navier_stokes_denary_1.pkl?rlkey=th53vacnldcuej9mfx6s012j1&dl=0
+      train_10000_test_1000: https://dl.dropboxusercontent.com/scl/fi/6c4fx1b5bdfnzytozypec/navier_stokes_denary_1.pkl?rlkey=dmz0dt8mnb1pqlgmpmkc1leop&dl=0
+
+navier_stokes_denary_2: 
+  dataset_group: custom
+  dataset_name: navier_stokes_denary_2
+  layers_num: 3
+  out_dim: 10 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 1 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: 2
+  edge_attr_dim: -1
+  # Model specific params
+  # SGCN & QGRN models
+  sgcn_hidden_sf: 2 
+  gcn_out_sf: 1
+  sgcn_hidden_size: 6
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+      train_100_test_20: https://dl.dropboxusercontent.com/scl/fi/wz7zmag2cshoic70k6wo6/navier_stokes_denary_2.pkl?rlkey=smr3xcva3gruogmo0q8b8ejfz&dl=0
+      train_1000_test_200: https://dl.dropboxusercontent.com/scl/fi/h1it9hfu572y7npmo4cjx/navier_stokes_denary_2.pkl?rlkey=3i63lk85c28nr74rl0mx4hode&dl=0
+      train_10000_test_1000: https://dl.dropboxusercontent.com/scl/fi/t4r0vvsiksnpo3khg2via/navier_stokes_denary_2.pkl?rlkey=9urivllqql4hcfiwftsztmlw2&dl=0
+
+# AIDS: 
+#     num_classes: 2
+#     max_node_degree:  7
+#     node_features: pde_on-6
+#     pos_exists: True
+#     total_dataset: 2000     
+#     splits:
+#         - train_100_test_20
+#         - train_1000_test_200
+#         - train_1600_test_400
+aids_yes_pos:
+  dataset_group: custom
+  dataset_name: aids
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 6 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: 2
+  edge_attr_dim: -1
+  # Model specific params
+  # SGCN & QGRN models
+  sgcn_hidden_sf: 2 
+  sgcn_out_sf: 2 
+  sgcn_hidden_size: 4
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+      train_100_test_20: https://dl.dropboxusercontent.com/scl/fi/u0znszatfokt6zahpbzat/aids.pkl?rlkey=5w9hd6avasooapyti7vyueje1&dl=0
+      train_1000_test_200: https://dl.dropboxusercontent.com/scl/fi/9zqupve86kggy9t3sotam/aids.pkl?rlkey=c5ukkdj76qh9e8vtofcp2gzgl&dl=0
+      train_1600_test_400: https://dl.dropboxusercontent.com/scl/fi/gah4c4vpsqnm6qlfcaluu/aids.pkl?rlkey=cg95tdcqyixfjjnz8z8szk5si&dl=0
+
+# Letter-high: 
+#     num_classes: 15
+#     max_node_degree:  6
+#     node_features: pde_on-3
+#     pos_exists: True
+#     total_dataset: 2250
+#     splits:
+#         - train_150_test_30
+#         - train_1050_test_150
+#         - train_1650_test_450
+#         - train_1725_test_525
+letter_high_yes_pos:  
+  dataset_group: custom
+  dataset_name: letter_high
+  layers_num: 3
+  out_dim: 15 # num_classes
+  num_sub_kernels: 6 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: 2
+  edge_attr_dim: -1
+  # Model specific params
+  # SGCN & QGRN models
+  sgcn_hidden_sf: 2 
+  sgcn_out_sf: 1 
+  sgcn_hidden_size: 5
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+      train_150_test_30: https://dl.dropboxusercontent.com/scl/fi/qeijfm8znt3gsg2eqhbcx/letter_high.pkl?rlkey=ypuk44y4t13ynkigt0iozypbu&dl=0
+      train_1050_test_150: https://dl.dropboxusercontent.com/scl/fi/4wp1tp05ihf2stlwir73y/letter_high.pkl?rlkey=59gw8aocinab3gfb6k5x4tmxh&dl=0
+      train_1650_test_450: https://dl.dropboxusercontent.com/scl/fi/p2jcjtcg70tuvku00pxqf/letter_high.pkl?rlkey=q7120ws7nyscelp3dal5o4wy0&dl=0
+      train_1725_test_525: https://dl.dropboxusercontent.com/scl/fi/9xu3u7ps22235jl7sjbh9/letter_high.pkl?rlkey=0rqdosvrhl4dozno5nscdj3ox&dl=0
+
+# Letter-low:
+#     num_classes: 15
+#     max_node_degree:  5
+#     node_features: pde_on-3
+#     pos_exists: True
+#     total_dataset: 2250
+#     splits:
+#         - train_150_test_30
+#         - train_1050_test_150
+#         - train_1650_test_450
+#         - train_1725_test_525
+letter_low_yes_pos: 
+  dataset_group: custom
+  dataset_name: letter_low
+  layers_num: 3
+  out_dim: 15 # num_classes
+  num_sub_kernels: 5 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: 2
+  edge_attr_dim: -1
+  # Model specific params
+  # SGCN & QGRN models
+  sgcn_hidden_sf: 2 
+  sgcn_out_sf: 1 
+  sgcn_hidden_size: 5
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+      train_150_test_30: https://dl.dropboxusercontent.com/scl/fi/ni7cm0ju0i1aos6o7b7f6/letter_low.pkl?rlkey=ajnumwl6h15bnmkub5z6dn0yn&dl=0
+      train_1050_test_150: https://dl.dropboxusercontent.com/scl/fi/6i87436465zfhzaxd16rj/letter_low.pkl?rlkey=k1vyeozy3tpy5t2ws2u9jc6pq&dl=0
+      train_1650_test_450: https://dl.dropboxusercontent.com/scl/fi/wx7zhu26tiffo5cbcr1vm/letter_low.pkl?rlkey=j1ekozzpup3rv2n1oip58a4sy&dl=0
+      train_1725_test_525: https://dl.dropboxusercontent.com/scl/fi/grgyv5v402v8au0cv9702/letter_low.pkl?rlkey=ae8h2roth48jztkiilz05mhct&dl=0
+
+# Letter-med: 
+#     num_classes: 15
+#     max_node_degree:  5
+#     node_features: pde_on-3
+#     pos_exists: True
+#     total_dataset: 2250
+#     splits:
+#         - train_150_test_30
+#         - train_1050_test_150
+#         - train_1650_test_450
+#         - train_1725_test_525
+letter_med_yes_pos: 
+  dataset_group: custom
+  dataset_name: letter_med
+  layers_num: 3
+  out_dim: 15 # num_classes
+  num_sub_kernels: 5 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: 2
+  edge_attr_dim: -1
+  # Model specific params
+  # SGCN & QGRN models
+  sgcn_hidden_sf: 2 
+  sgcn_out_sf: 1 
+  sgcn_hidden_size: 5
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+      train_150_test_30: https://dl.dropboxusercontent.com/scl/fi/0ue0ocmj70suvicj751lx/letter_med.pkl?rlkey=aqxyqmevkyru3k5it5yaw43sg&dl=0
+      train_1050_test_150: https://dl.dropboxusercontent.com/scl/fi/8f7j1z6lrywinw8ds0see/letter_med.pkl?rlkey=epg9jeej714aaz9i65ilxbqx2&dl=0
+      train_1650_test_450: https://dl.dropboxusercontent.com/scl/fi/eibutccv57m3xo4elck1h/letter_med.pkl?rlkey=om3q4s5qxyupsokmu1zc94cnx&dl=0
+      train_1725_test_525: https://dl.dropboxusercontent.com/scl/fi/md5815hms3imipkau7r2i/letter_med.pkl?rlkey=7kxh3ppky7wbmil2i9jx8yapn&dl=0

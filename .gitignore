@@ -1,0 +1,6 @@
+### All files to ignore ###
+.vscode/
+.history/
+__pycache__/
+Dataset/
+Experiments/

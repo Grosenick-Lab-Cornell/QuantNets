@@ -1,0 +1,74 @@
+##############################################################################################################################################################################################
+######################################################################### STANDARD DATASETS (HAVE POSITIONAL DESCRIPTORS) ####################################################################
+##############################################################################################################################################################################################
+mnist:
+  dataset_group: standard
+  dataset_name: mnist
+  layers_num: 3
+  out_dim: 10 # num_classes
+  num_sub_kernels: 9 # <= max_node_degree
+  in_channels: 1 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: 2
+  edge_attr_dim: -1
+  # Model specific params
+  cnn_kernel_size: 3
+  cnn_stride: 1
+  cnn_padding: 1
+  is_dataset_homogenous: True # Determines for QGCN whether to enable caching
+  # Dataset loc
+  image_to_graph_supported: True # Specifies whether there's ability to support image tensor to torch geo data conversion during runtime
+  download_url:  # Used if dataset split for this dataset doesn't exist
+      train_100_test_20: https://dl.dropboxusercontent.com/scl/fi/da1sfgpr3sjoko5gboxm8/mnist.pkl?rlkey=rmj4ctryxovddq8u2bbd3im34&dl=0
+      train_1000_test_200: https://dl.dropboxusercontent.com/scl/fi/k6fudazul40xyl5kax203/mnist.pkl?rlkey=ucwsrfwc1jcne0lir9eyqmk1q&dl=0
+      train_10000_test_1000: https://dl.dropboxusercontent.com/scl/fi/c6dj0qekv4n6mmwhbs2yf/mnist.pkl?rlkey=63uk506z9q3l6pvd04ahchueg&dl=0
+      train_60000_test_10000: NULL
+
+fashionmnist: 
+  dataset_group: standard
+  dataset_name: fashionmnist
+  layers_num: 6
+  out_dim: 10 # num_classes
+  num_sub_kernels: 9 # <= max_node_degree
+  in_channels: 1 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: 2
+  edge_attr_dim: -1
+  # Model specific params
+  cnn_kernel_size: 3
+  cnn_stride: 1
+  cnn_padding: 1
+  is_dataset_homogenous: True # determines for QGCN whether to enable caching
+  # Dataset loc
+  image_to_graph_supported: True # Specifies whether there's ability to support image tensor to torch geo data conversion during runtime
+  download_url:  # Used if dataset split for this dataset doesn't exist
+      train_100_test_20: https://dl.dropboxusercontent.com/scl/fi/dsoawuvc89etmgm5xyx0b/fashionmnist.pkl?rlkey=65kugyvhc83v9p7t0rgzcilxh&dl=0
+      train_1000_test_200: https://dl.dropboxusercontent.com/scl/fi/zy79stswbx3yapfyv0spn/fashionmnist.pkl?rlkey=sy7amb6ip5lu5t8w0vydjf64j&dl=0
+      train_10000_test_1000: https://dl.dropboxusercontent.com/scl/fi/grqjcbpwm6rajnjob213q/fashionmnist.pkl?rlkey=czzodd35a84ltr0g3cp3ecl2x&dl=0
+      train_60000_test_10000: NULL
+
+cifar10: 
+  dataset_group: standard
+  dataset_name: cifar10
+  layers_num: 9
+  out_dim: 10 # num_classes
+  num_sub_kernels: 9 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: 2
+  edge_attr_dim: -1
+  # Model specific params
+  cnn_kernel_size: 3
+  cnn_stride: 1
+  cnn_padding: 1
+  is_dataset_homogenous: True # determines for QGCN whether to enable caching
+  # Dataset loc
+  image_to_graph_supported: True # Specifies whether there's ability to support image tensor to torch geo data conversion during runtime
+  download_url:  # Used if dataset split for this dataset doesn't exist
+      train_100_test_20: https://dl.dropboxusercontent.com/scl/fi/j74qvvagesf49paoli6ir/cifar10.pkl?rlkey=ve65fk8eit6wzg0ut39nrmpf9&dl=0
+      train_1000_test_200: https://dl.dropboxusercontent.com/scl/fi/l768t8v86xakf1n80e9q7/cifar10.pkl?rlkey=ig4dunlnwhuhrs30u9egan6p5&dl=0
+      train_10000_test_1000: https://dl.dropboxusercontent.com/scl/fi/z7kdju2nzfnjojfgt8wz8/cifar10.pkl?rlkey=0herqwcsq0buzowbqzf3z4dcb&dl=0
+      train_50000_test_10000: NULL

@@ -1,0 +1,429 @@
+##############################################################################################################################################################################################
+######################################################################### DATASETS WITHOUT POSITIONAL DESCRIPTORS DATASETS ###################################################################
+##############################################################################################################################################################################################
+# AIDS:
+#     num_classes: 2
+#     max_node_degree:  7
+#     node_features: pde_on-6
+#     pos_exists: True
+#     total_dataset: 2000     
+#     splits:
+#         - train_100_test_20
+#         - train_1000_test_200
+#         - train_1600_test_400
+aids_no_pos_nsk_2: 
+  dataset_group: custom
+  dataset_name: aids
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 2 # <= max_node_degree
+  in_channels: 6 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_1600_test_400: https://dl.dropboxusercontent.com/scl/fi/gah4c4vpsqnm6qlfcaluu/aids.pkl?rlkey=cg95tdcqyixfjjnz8z8szk5si&dl=0
+
+aids_no_pos_nsk_3: 
+  dataset_group: custom
+  dataset_name: aids
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 3 # <= max_node_degree
+  in_channels: 6 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_1600_test_400: https://dl.dropboxusercontent.com/scl/fi/gah4c4vpsqnm6qlfcaluu/aids.pkl?rlkey=cg95tdcqyixfjjnz8z8szk5si&dl=0
+
+aids_no_pos_nsk_5: 
+  dataset_group: custom
+  dataset_name: aids
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 5 # <= max_node_degree
+  in_channels: 6 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_1600_test_400: https://dl.dropboxusercontent.com/scl/fi/gah4c4vpsqnm6qlfcaluu/aids.pkl?rlkey=cg95tdcqyixfjjnz8z8szk5si&dl=0
+
+aids_no_pos_nsk_7: 
+  dataset_group: custom
+  dataset_name: aids
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 6 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_1600_test_400: https://dl.dropboxusercontent.com/scl/fi/gah4c4vpsqnm6qlfcaluu/aids.pkl?rlkey=cg95tdcqyixfjjnz8z8szk5si&dl=0
+
+aids_no_pos_nsk_9: 
+  dataset_group: custom
+  dataset_name: aids
+  layers_num: 3
+  out_dim": 2 # num_classes
+  num_sub_kernels": 9 # <= max_node_degree
+  in_channels": 6 # node_features
+  hidden_channels": 32
+  out_channels": 64
+  pos_descr_dim": -1
+  edge_attr_dim": -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_1600_test_400: https://dl.dropboxusercontent.com/scl/fi/gah4c4vpsqnm6qlfcaluu/aids.pkl?rlkey=cg95tdcqyixfjjnz8z8szk5si&dl=0
+  
+
+# COIL-DEL: 
+#     num_classes: 100
+#     max_node_degree:  15
+#     node_features: pde_on-3
+#     pos_exists: True
+#     total_dataset: 3900
+#     splits:
+#         - train_500_test_100
+#         - train_1000_test_200
+#         - train_3200_test_700
+coil_del_no_pos_nsk_2:
+  dataset_group: custom
+  dataset_name: coil_del
+  layers_num: 3
+  out_dim: 100 # num_classes
+  num_sub_kernels: 2 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_3200_test_700: https://dl.dropboxusercontent.com/scl/fi/083lwxx146hpke009rc2m/coil_del.pkl?rlkey=doc4ddqdrofypnnxwxrj4z7zd&dl=0
+
+coil_del_no_pos_nsk_3:
+  dataset_group: custom
+  dataset_name: coil_del
+  layers_num: 3
+  out_dim: 100 # num_classes
+  num_sub_kernels: 3 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_3200_test_700: https://dl.dropboxusercontent.com/scl/fi/083lwxx146hpke009rc2m/coil_del.pkl?rlkey=doc4ddqdrofypnnxwxrj4z7zd&dl=0
+
+coil_del_no_pos_nsk_5:
+  dataset_group: custom
+  dataset_name: coil_del
+  layers_num: 3
+  out_dim: 100 # num_classes
+  num_sub_kernels: 5 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_3200_test_700: https://dl.dropboxusercontent.com/scl/fi/083lwxx146hpke009rc2m/coil_del.pkl?rlkey=doc4ddqdrofypnnxwxrj4z7zd&dl=0
+
+coil_del_no_pos_nsk_7:
+  dataset_group: custom
+  dataset_name: coil_del
+  layers_num: 3
+  out_dim: 100 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_3200_test_700: https://dl.dropboxusercontent.com/scl/fi/083lwxx146hpke009rc2m/coil_del.pkl?rlkey=doc4ddqdrofypnnxwxrj4z7zd&dl=0
+
+coil_del_no_pos_nsk_9:
+  dataset_group: custom
+  dataset_name: coil_del
+  layers_num: 3
+  out_dim: 100 # num_classes
+  num_sub_kernels: 9 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_3200_test_700: https://dl.dropboxusercontent.com/scl/fi/083lwxx146hpke009rc2m/coil_del.pkl?rlkey=doc4ddqdrofypnnxwxrj4z7zd&dl=0
+
+
+# ENZYMES:
+#     num_classes: 6
+#     max_node_degree:  10
+#     node_features: pde_on-20
+#     pos_exists: False
+#     total_dataset: 600
+#     splits:
+#         - train_480_test_120
+enzymes_no_pos_nsk_2:
+  dataset_group: custom
+  dataset_name: enzymes
+  layers_num: 3
+  out_dim: 6 # num_classes
+  num_sub_kernels: 2 # <= max_node_degree
+  in_channels: 20 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_480_test_120: https://dl.dropboxusercontent.com/scl/fi/71s43rvycjfxk4ubp3m7v/enzymes.pkl?rlkey=8bbt93zltcxlg4b00zjfo8152&dl=0
+
+enzymes_no_pos_nsk_3:
+  dataset_group: custom
+  dataset_name: enzymes
+  layers_num: 3
+  out_dim: 6 # num_classes
+  num_sub_kernels: 3 # <= max_node_degree
+  in_channels: 20 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_480_test_120: https://dl.dropboxusercontent.com/scl/fi/71s43rvycjfxk4ubp3m7v/enzymes.pkl?rlkey=8bbt93zltcxlg4b00zjfo8152&dl=0
+
+enzymes_no_pos_nsk_5:
+  dataset_group: custom
+  dataset_name: enzymes
+  layers_num: 3
+  out_dim: 6 # num_classes
+  num_sub_kernels: 5 # <= max_node_degree
+  in_channels: 20 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_480_test_120: https://dl.dropboxusercontent.com/scl/fi/71s43rvycjfxk4ubp3m7v/enzymes.pkl?rlkey=8bbt93zltcxlg4b00zjfo8152&dl=0
+
+enzymes_no_pos_nsk_7:
+  dataset_group: custom
+  dataset_name: enzymes
+  layers_num: 3
+  out_dim: 6 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 20 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_480_test_120: https://dl.dropboxusercontent.com/scl/fi/71s43rvycjfxk4ubp3m7v/enzymes.pkl?rlkey=8bbt93zltcxlg4b00zjfo8152&dl=0
+
+enzymes_no_pos_nsk_9:
+  dataset_group: custom
+  dataset_name: enzymes
+  layers_num: 3
+  out_dim: 6 # num_classes
+  num_sub_kernels: 9 # <= max_node_degree
+  in_channels: 20 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_480_test_120: https://dl.dropboxusercontent.com/scl/fi/71s43rvycjfxk4ubp3m7v/enzymes.pkl?rlkey=8bbt93zltcxlg4b00zjfo8152&dl=0
+
+
+# Letter-high: 
+#     num_classes: 15
+#     max_node_degree:  6
+#     node_features: pde_on-3
+#     pos_exists: True
+#     total_dataset: 2250
+#     splits:
+#         - train_150_test_30
+#         - train_1050_test_150
+#         - train_1650_test_450
+#         - train_1725_test_525
+letter_high_no_pos_nsk_2: 
+  dataset_group: custom
+  dataset_name: letter_high
+  layers_num: 3
+  out_dim: 15 # num_classes
+  num_sub_kernels: 2 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_1725_test_525: https://dl.dropboxusercontent.com/scl/fi/9xu3u7ps22235jl7sjbh9/letter_high.pkl?rlkey=0rqdosvrhl4dozno5nscdj3ox&dl=0
+
+letter_high_no_pos_nsk_3:
+  dataset_group: custom
+  dataset_name: letter_high
+  layers_num: 3
+  out_dim: 15 # num_classes
+  num_sub_kernels: 3 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_1725_test_525: https://dl.dropboxusercontent.com/scl/fi/9xu3u7ps22235jl7sjbh9/letter_high.pkl?rlkey=0rqdosvrhl4dozno5nscdj3ox&dl=0
+  
+letter_high_no_pos_nsk_5:
+  dataset_group: custom
+  dataset_name: letter_high
+  layers_num: 3
+  out_dim: 15 # num_classes
+  num_sub_kernels: 5 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_1725_test_525: https://dl.dropboxusercontent.com/scl/fi/9xu3u7ps22235jl7sjbh9/letter_high.pkl?rlkey=0rqdosvrhl4dozno5nscdj3ox&dl=0
+
+letter_high_no_pos_nsk_7:
+  dataset_group: custom
+  dataset_name: letter_high
+  layers_num: 3
+  out_dim: 15 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_1725_test_525: https://dl.dropboxusercontent.com/scl/fi/9xu3u7ps22235jl7sjbh9/letter_high.pkl?rlkey=0rqdosvrhl4dozno5nscdj3ox&dl=0
+
+letter_high_no_pos_nsk_9:
+  dataset_group: custom
+  dataset_name: letter_high
+  layers_num: 3
+  out_dim: 15 # num_classes
+  num_sub_kernels: 9 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_1725_test_525: https://dl.dropboxusercontent.com/scl/fi/9xu3u7ps22235jl7sjbh9/letter_high.pkl?rlkey=0rqdosvrhl4dozno5nscdj3ox&dl=0
+
+
+# PROTEINS:
+#     num_classes: 2
+#     max_node_degree:  26
+#     node_features: pde_on-3
+#     total_dataset: 1113
+#     splits:
+#         - train_100_test_20
+#         - train_850_test_250
+#         - train_1000_test_100
+proteins_no_pos_nsk_2: 
+  dataset_group: custom
+  dataset_name: proteins
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 2 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_1000_test_100: https://dl.dropboxusercontent.com/scl/fi/7vmhiaujh7vc1klmsphhx/proteins.pkl?rlkey=twvrxidtqaqg1vrbt0zkhxvge&dl=0
+
+proteins_no_pos_nsk_3:
+  dataset_group: custom
+  dataset_name: proteins
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 3 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_1000_test_100: https://dl.dropboxusercontent.com/scl/fi/7vmhiaujh7vc1klmsphhx/proteins.pkl?rlkey=twvrxidtqaqg1vrbt0zkhxvge&dl=0
+
+proteins_no_pos_nsk_5:
+  dataset_group: custom
+  dataset_name: proteins
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 5 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_1000_test_100: https://dl.dropboxusercontent.com/scl/fi/7vmhiaujh7vc1klmsphhx/proteins.pkl?rlkey=twvrxidtqaqg1vrbt0zkhxvge&dl=0
+
+proteins_no_pos_nsk_7:
+  dataset_group: custom
+  dataset_name: proteins
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_1000_test_100: https://dl.dropboxusercontent.com/scl/fi/7vmhiaujh7vc1klmsphhx/proteins.pkl?rlkey=twvrxidtqaqg1vrbt0zkhxvge&dl=0
+
+proteins_no_pos_nsk_9:
+  dataset_group: custom
+  dataset_name: proteins
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 9 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_1000_test_100: https://dl.dropboxusercontent.com/scl/fi/7vmhiaujh7vc1klmsphhx/proteins.pkl?rlkey=twvrxidtqaqg1vrbt0zkhxvge&dl=0

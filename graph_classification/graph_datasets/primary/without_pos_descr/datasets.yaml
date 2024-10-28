@@ -1,0 +1,649 @@
+###########################################################################################################################################################################################
+###################################################################### DATASETS WITHOUT POSITIONAL DESCRIPTORS DATASETS ###################################################################
+###########################################################################################################################################################################################
+# AIDS: 
+#     num_classes: 2
+#     max_node_degree:  7
+#     node_features: pde_on-6
+#     pos_exists: True
+#     total_dataset: 2000     
+#     splits:
+#         - train_100_test_20
+#         - train_1000_test_200
+#         - train_1600_test_400
+aids_no_pos:
+  dataset_group: custom
+  dataset_name: aids
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 6 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Model specific params
+  # ChebConv & GraphConv
+  cheb_K: 4
+  cheb_out_sf: 1
+  cheb_hidden_sf: 3
+  graph_out_sf: 2
+  graph_hidden_sf: 4
+  # GCNConv & QGRN
+  gcn_hidden_sf: 6
+  gcn_out_sf: 2
+  # GeneralConv & GATv2Conv
+  general_hidden_heads: 2
+  general_out_sf: 4
+  general_hidden_sf: 2
+  gatv2_hidden_heads: 3
+  gatv2_out_sf: 1
+  gatv2_hidden_sf: 1
+  # SGConv & GenConv
+  sg_K: 5
+  sg_out_sf: 2
+  sg_hidden_sf: 6
+  gen_out_sf: 3
+  gen_hidden_sf: 2
+  # TransformerConv
+  transf_hidden_heads: 3
+  transf_out_sf: 1
+  transf_hidden_sf: 1
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_100_test_20:   https://dl.dropboxusercontent.com/scl/fi/u0znszatfokt6zahpbzat/aids.pkl?rlkey=5w9hd6avasooapyti7vyueje1&dl=0
+    train_1000_test_200: https://dl.dropboxusercontent.com/scl/fi/9zqupve86kggy9t3sotam/aids.pkl?rlkey=c5ukkdj76qh9e8vtofcp2gzgl&dl=0
+    train_1600_test_400: https://dl.dropboxusercontent.com/scl/fi/gah4c4vpsqnm6qlfcaluu/aids.pkl?rlkey=cg95tdcqyixfjjnz8z8szk5si&dl=0
+
+# COIL-DEL: 
+#     num_classes: 100
+#     max_node_degree:  15
+#     node_features: pde_on-3
+#     pos_exists: True
+#     total_dataset: 3900
+#     splits:
+#         - train_500_test_100
+#         - train_1000_test_200
+#         - train_3200_test_700
+coil_del_no_pos:
+  dataset_group: custom
+  dataset_name: coil_del
+  layers_num: 3
+  out_dim: 100 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Model specific params
+  # ChebConv & GraphConv
+  cheb_K: 2
+  cheb_out_sf: 3
+  cheb_hidden_sf: 3
+  graph_out_sf: 3
+  graph_hidden_sf: 3
+  # GCNConv & QGRN
+  gcn_hidden_sf: 4
+  gcn_out_sf: 3
+  # GeneralConv & GATv2Conv
+  general_hidden_heads: 2
+  general_out_sf: 3
+  general_hidden_sf: 2
+  gatv2_hidden_heads: 3
+  gatv2_out_sf: 1
+  gatv2_hidden_sf: 1
+  # SGConv & GenConv
+  sg_K: 5
+  sg_out_sf: 2
+  sg_hidden_sf: 6
+  gen_out_sf: 2
+  gen_hidden_sf: 3
+  # TransformerConv
+  transf_hidden_heads: 3
+  transf_out_sf: 1
+  transf_hidden_sf: 1
+  # Dataset loc
+  download_url:  # Used if dataset split for this dataset doesn't exist
+    train_500_test_100:  https://dl.dropboxusercontent.com/scl/fi/supb14nvmvsc52cq790n1/coil_del.pkl?rlkey=s1xk5ujxu3zjmkyeyhcweqgbp&dl=0
+    train_1000_test_200: https://dl.dropboxusercontent.com/scl/fi/n74d6lb5c1684scs984ld/coil_del.pkl?rlkey=huop699z0d55r4ru36m818mfu&dl=0
+    train_3200_test_700: https://dl.dropboxusercontent.com/scl/fi/083lwxx146hpke009rc2m/coil_del.pkl?rlkey=doc4ddqdrofypnnxwxrj4z7zd&dl=0
+
+# ENZYMES:
+#     num_classes: 6
+#     max_node_degree:  10
+#     node_features: pde_on-20
+#     pos_exists: False
+#     total_dataset: 600
+#     splits:
+#         - train_480_test_120
+enzymes_no_pos:
+  dataset_group: custom
+  dataset_name: enzymes
+  layers_num: 3
+  out_dim: 6 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 20 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Model specific params
+  # ChebConv & GraphConv
+  cheb_K: 2
+  cheb_out_sf: 2
+  cheb_hidden_sf: 4
+  graph_out_sf: 2
+  graph_hidden_sf: 4
+  # GCNConv & QGRN
+  gcn_hidden_sf: 6
+  gcn_out_sf: 2
+  # GeneralConv & GATv2Conv
+  general_hidden_heads: 3
+  general_out_sf: 3
+  general_hidden_sf: 2
+  gatv2_hidden_heads: 3
+  gatv2_out_sf: 1
+  gatv2_hidden_sf: 1
+  # SGConv & GenConv
+  sg_K: 5
+  sg_out_sf: 4
+  sg_hidden_sf: 5
+  gen_out_sf: 3
+  gen_hidden_sf: 2
+  # TransformerConv
+  transf_hidden_heads: 3
+  transf_out_sf: 1
+  transf_hidden_sf: 1
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_480_test_120: https://dl.dropboxusercontent.com/scl/fi/71s43rvycjfxk4ubp3m7v/enzymes.pkl?rlkey=8bbt93zltcxlg4b00zjfo8152&dl=0
+
+# Frankenstein:
+#   num_classes: 2
+#   max_node_degree: 4
+#   node_features: pde_on-781, pde_off-779
+#   pos_exists: False
+#   total_dataset: 4337
+#   splits:
+#       - train:100_test:20
+#       - train:1000_test:200
+#       - train:2000_test:500
+#       - train:3400_test:900
+frankenstein_no_pos:
+  dataset_group: custom
+  dataset_name: frankenstein
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 4 # <= max_node_degree
+  in_channels: 781 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Model specific params
+  # ChebConv & GraphConv
+  cheb_K: 3
+  cheb_out_sf: 3
+  cheb_hidden_sf: 11
+  graph_out_sf: 6
+  graph_hidden_sf: 14
+  # GCNConv & QGRN
+  gcn_hidden_sf: 24 
+  gcn_out_sf: 5
+  # GeneralConv & GATv2Conv
+  general_hidden_heads: 3
+  general_out_sf: 6
+  general_hidden_sf: 8
+  gatv2_hidden_heads: 3
+  gatv2_out_sf: 2
+  gatv2_hidden_sf: 4
+  # SGConv & GenConv
+  sg_K: 5
+  sg_out_sf: 8
+  sg_hidden_sf: 22
+  gen_out_sf: 4
+  gen_hidden_sf: 14
+  # TransformerConv
+  transf_hidden_heads: 3
+  transf_out_sf: 1
+  transf_hidden_sf: 3
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_100_test_20:   https://dl.dropboxusercontent.com/scl/fi/ut4x5irjfor4357vno920/frankenstein.pkl?rlkey=6abjmsfwe6ehpr1u43oatr9ws&dl=0
+    train_1000_test_200: https://dl.dropboxusercontent.com/scl/fi/izejoggdc8p6ank3qxwfl/frankenstein.pkl?rlkey=65ojr9y2wzxa90sbp3mici943&dl=0
+    train_2000_test_500: https://dl.dropboxusercontent.com/scl/fi/xil1ljva2gd2e5suq6he5/frankenstein.pkl?rlkey=7wbiy5jxdsf3cosf0r657a1c5&dl=0
+    train_3400_test_900: https://dl.dropboxusercontent.com/scl/fi/3ubqhqwh7d4cvqkomkkpd/frankenstein.pkl?rlkey=jt7mgxgtiij62hpixq12okwi2&dl=0
+
+# Letter-high: 
+#     num_classes: 15
+#     max_node_degree:  6
+#     node_features: pde_on-3
+#     pos_exists: True
+#     total_dataset: 2250
+#     splits:
+#         - train_150_test_30
+#         - train_1050_test_150
+#         - train_1650_test_450
+#         - train_1725_test_525
+letter_high_no_pos:
+  dataset_group: custom
+  dataset_name: letter_high
+  layers_num: 3
+  out_dim: 15 # num_classes
+  num_sub_kernels: 6 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Model specific params
+  # ChebConv & GraphConv
+  cheb_K: 2
+  cheb_out_sf: 3
+  cheb_hidden_sf: 3
+  graph_out_sf: 3
+  graph_hidden_sf: 3
+  # GCNConv & QGRN
+  gcn_hidden_sf: 5 
+  gcn_out_sf: 3
+  # GeneralConv & GATv2Conv
+  general_hidden_heads: 2
+  general_out_sf: 4
+  general_hidden_sf: 2
+  gatv2_hidden_heads: 2
+  gatv2_out_sf: 1
+  gatv2_hidden_sf: 2
+  # SGConv & GenConv
+  sg_K: 5
+  sg_out_sf: 3
+  sg_hidden_sf: 5
+  gen_out_sf: 2
+  gen_hidden_sf: 3
+  # TransformerConv
+  transf_hidden_heads: 2
+  transf_out_sf: 2
+  transf_hidden_sf: 1
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_150_test_30:   https://dl.dropboxusercontent.com/scl/fi/qeijfm8znt3gsg2eqhbcx/letter_high.pkl?rlkey=ypuk44y4t13ynkigt0iozypbu&dl=0
+    train_1050_test_150: https://dl.dropboxusercontent.com/scl/fi/4wp1tp05ihf2stlwir73y/letter_high.pkl?rlkey=59gw8aocinab3gfb6k5x4tmxh&dl=0
+    train_1650_test_450: https://dl.dropboxusercontent.com/scl/fi/p2jcjtcg70tuvku00pxqf/letter_high.pkl?rlkey=q7120ws7nyscelp3dal5o4wy0&dl=0
+    train_1725_test_525: https://dl.dropboxusercontent.com/scl/fi/9xu3u7ps22235jl7sjbh9/letter_high.pkl?rlkey=0rqdosvrhl4dozno5nscdj3ox&dl=0
+
+# Letter-low:
+#     num_classes: 15
+#     max_node_degree:  5
+#     node_features: pde_on-3
+#     pos_exists: True
+#     total_dataset: 2250
+#     splits:
+#         - train_150_test_30
+#         - train_1050_test_150
+#         - train_1650_test_450
+#         - train_1725_test_525
+letter_low_no_pos:
+  dataset_group: custom
+  dataset_name: letter_low
+  layers_num: 3
+  out_dim: 15 # num_classes
+  num_sub_kernels: 5 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Model specific params
+  # ChebConv & GraphConv
+  cheb_K: 2
+  cheb_out_sf: 3
+  cheb_hidden_sf: 3
+  graph_out_sf: 3
+  graph_hidden_sf: 3
+  # GCNConv & QGRN
+  gcn_hidden_sf: 5
+  gcn_out_sf: 3
+  # GeneralConv & GATv2Conv
+  general_hidden_heads: 2
+  general_out_sf: 4
+  general_hidden_sf: 2
+  gatv2_hidden_heads: 2
+  gatv2_out_sf: 1
+  gatv2_hidden_sf: 2
+  # SGConv & GenConv
+  sg_K: 5
+  sg_out_sf: 3
+  sg_hidden_sf: 5
+  gen_out_sf: 2
+  gen_hidden_sf: 3
+  # TransformerConv
+  transf_hidden_heads: 2
+  transf_out_sf: 2
+  transf_hidden_sf: 1
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_150_test_30:   https://dl.dropboxusercontent.com/scl/fi/ni7cm0ju0i1aos6o7b7f6/letter_low.pkl?rlkey=ajnumwl6h15bnmkub5z6dn0yn&dl=0
+    train_1050_test_150: https://dl.dropboxusercontent.com/scl/fi/6i87436465zfhzaxd16rj/letter_low.pkl?rlkey=k1vyeozy3tpy5t2ws2u9jc6pq&dl=0
+    train_1650_test_450: https://dl.dropboxusercontent.com/scl/fi/wx7zhu26tiffo5cbcr1vm/letter_low.pkl?rlkey=j1ekozzpup3rv2n1oip58a4sy&dl=0
+    train_1725_test_525: https://dl.dropboxusercontent.com/scl/fi/grgyv5v402v8au0cv9702/letter_low.pkl?rlkey=ae8h2roth48jztkiilz05mhct&dl=0
+
+# Letter-med: 
+#     num_classes: 15
+#     max_node_degree:  5
+#     node_features: pde_on-3
+#     pos_exists: True
+#     total_dataset: 2250
+#     splits:
+#         - train_150_test_30
+#         - train_1050_test_150
+#         - train_1650_test_450
+#         - train_1725_test_525
+letter_med_no_pos:
+  dataset_group: custom
+  dataset_name: letter_med
+  layers_num: 3
+  out_dim: 15 # num_classes
+  num_sub_kernels: 5 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Model specific params
+  # ChebConv & GraphConv
+  cheb_K: 2
+  cheb_out_sf: 3
+  cheb_hidden_sf: 3
+  graph_out_sf: 3
+  graph_hidden_sf: 3
+  # GCNConv & QGRN
+  gcn_hidden_sf: 5 
+  gcn_out_sf: 3
+  # GeneralConv & GATv2Conv
+  general_hidden_heads: 2
+  general_out_sf: 4
+  general_hidden_sf: 2
+  gatv2_hidden_heads: 2
+  gatv2_out_sf: 1
+  gatv2_hidden_sf: 2
+  # SGConv & GenConv
+  sg_K: 5
+  sg_out_sf: 3
+  sg_hidden_sf: 5
+  gen_out_sf: 2
+  gen_hidden_sf: 3
+  # TransformerConv
+  transf_hidden_heads: 2
+  transf_out_sf: 2
+  transf_hidden_sf: 1
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_150_test_30:   https://dl.dropboxusercontent.com/scl/fi/0ue0ocmj70suvicj751lx/letter_med.pkl?rlkey=aqxyqmevkyru3k5it5yaw43sg&dl=0
+    train_1050_test_150: https://dl.dropboxusercontent.com/scl/fi/8f7j1z6lrywinw8ds0see/letter_med.pkl?rlkey=epg9jeej714aaz9i65ilxbqx2&dl=0
+    train_1650_test_450: https://dl.dropboxusercontent.com/scl/fi/eibutccv57m3xo4elck1h/letter_med.pkl?rlkey=om3q4s5qxyupsokmu1zc94cnx&dl=0
+    train_1725_test_525: https://dl.dropboxusercontent.com/scl/fi/md5815hms3imipkau7r2i/letter_med.pkl?rlkey=7kxh3ppky7wbmil2i9jx8yapn&dl=0
+
+# Mutag:
+#   num_classes: 2
+#   max_node_degree: 5
+#   node_features: pde_on-2, pde_off-2
+#   pos_exists: False
+#   total_dataset: 188
+#   splits:
+#       - train:100_test:20
+#       - train:148_test:40
+mutag_no_pos:
+  dataset_group: custom
+  dataset_name: mutag
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 5 # <= max_node_degree
+  in_channels: 2 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Model specific params
+  # ChebConv & GraphConv
+  cheb_K: 2
+  cheb_out_sf: 3
+  cheb_hidden_sf: 3
+  graph_out_sf: 3
+  graph_hidden_sf: 3
+  # GCNConv & QGRN
+  gcn_hidden_sf: 5 
+  gcn_out_sf: 3
+  # GeneralConv & GATv2Conv
+  general_hidden_heads: 2
+  general_out_sf: 4
+  general_hidden_sf: 2
+  gatv2_hidden_heads: 3
+  gatv2_out_sf: 1
+  gatv2_hidden_sf: 1
+  # SGConv & GenConv
+  sg_K: 5
+  sg_out_sf: 3
+  sg_hidden_sf: 5
+  gen_out_sf: 2
+  gen_hidden_sf: 3
+  # TransformerConv
+  transf_hidden_heads: 3
+  transf_out_sf: 1
+  transf_hidden_sf: 1
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_100_test_20: https://dl.dropboxusercontent.com/scl/fi/5i18wan10o2wc7fjkdvj2/mutag.pkl?rlkey=p91qo0nqgdfyso65zduuayjce&dl=0
+    train_148_test_40: https://dl.dropboxusercontent.com/scl/fi/xz1qqnuios20q7m8t9b82/mutag.pkl?rlkey=z65l75s7sf2ltf3r91jj2wrdy&dl=0
+
+# Mutagenicity:
+#     num_classes: 2
+#     max_node_degree:  5
+#     node_features: pde_on-2
+#     pos_exists: False
+#     total_dataset: 4337
+#     splits:
+#         - train_100_test_20
+#         - train_1000_test_200
+#         - train_2000_test_500
+#         - train_3400_test_900
+mutagenicity_no_pos:
+  dataset_group: custom
+  dataset_name: mutagenicity
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 2 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Model specific params
+  # ChebConv & GraphConv
+  cheb_K: 3
+  cheb_out_sf: 2
+  cheb_hidden_sf: 3
+  graph_out_sf: 2
+  graph_hidden_sf: 4
+  # GCNConv & QGRN
+  gcn_hidden_sf: 6 
+  gcn_out_sf: 2
+  # GeneralConv & GATv2Conv
+  general_hidden_heads: 2
+  general_out_sf: 4
+  general_hidden_sf: 2
+  gatv2_hidden_heads: 3
+  gatv2_out_sf: 1
+  gatv2_hidden_sf: 1
+  # SGConv & GenConv
+  sg_K: 5
+  sg_out_sf: 2
+  sg_hidden_sf: 6
+  gen_out_sf: 2
+  gen_hidden_sf: 3
+  # TransformerConv
+  transf_hidden_heads: 3
+  transf_out_sf: 1
+  transf_hidden_sf: 1
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_100_test_20:   https://dl.dropboxusercontent.com/scl/fi/dgf8eg0fu4fea79yts7aq/mutagenicity.pkl?rlkey=oxt6heyk57wg0okww9wmsziul&dl=0
+    train_1000_test_200: https://dl.dropboxusercontent.com/scl/fi/6congycx03pz0wfa3dnqn/mutagenicity.pkl?rlkey=m95cuxllivykc4zkuj501sp69&dl=0
+    train_2000_test_500: https://dl.dropboxusercontent.com/scl/fi/h2qxegbpdz5q0k06cs551/mutagenicity.pkl?rlkey=ds5weycseottry0tkmsmkfl8r&dl=0
+    train_3400_test_900: https://dl.dropboxusercontent.com/scl/fi/8mkjfm1wjk9sqfj076zir/mutagenicity.pkl?rlkey=saquia4aan51t14g0n0a1rje5&dl=0
+
+# PROTEINS:
+#     num_classes: 2
+#     max_node_degree:  26
+#     node_features: pde_on-3
+#     total_dataset: 1113
+#     splits:
+#         - train_100_test_20
+#         - train_850_test_250
+#         - train_1000_test_100
+proteins_no_pos:
+  dataset_group: custom
+  dataset_name: proteins
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 3 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Model specific params
+  # ChebConv & GraphConv
+  cheb_K: 3
+  cheb_out_sf: 2
+  cheb_hidden_sf: 3
+  graph_out_sf: 2
+  graph_hidden_sf: 4
+  # GCNConv & QGRN
+  gcn_hidden_sf: 6
+  gcn_out_sf: 2
+  # GeneralConv & GATv2Conv
+  general_hidden_heads: 2
+  general_out_sf: 4
+  general_hidden_sf: 2
+  gatv2_hidden_heads: 3
+  gatv2_out_sf: 1
+  gatv2_hidden_sf: 1
+  # SGConv & GenConv
+  sg_K: 5
+  sg_out_sf: 2
+  sg_hidden_sf: 6
+  gen_out_sf: 2
+  gen_hidden_sf: 3
+  # TransformerConv
+  transf_hidden_heads: 3
+  transf_out_sf: 1
+  transf_hidden_sf: 1
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_100_test_20:   https://dl.dropboxusercontent.com/scl/fi/rkxvnyzhmxb4ce3i9tg3a/proteins.pkl?rlkey=44sqijlcxg9eddfej5ve7njcd&dl=0
+    train_850_test_250:  https://dl.dropboxusercontent.com/scl/fi/zbof8j650p7tna6qu5iyi/proteins.pkl?rlkey=nu1pwc641rfdntbiy2ml8zdr6&dl=0
+    train_1000_test_100: https://dl.dropboxusercontent.com/scl/fi/7vmhiaujh7vc1klmsphhx/proteins.pkl?rlkey=twvrxidtqaqg1vrbt0zkhxvge&dl=0
+
+# PROTEINS-Full:
+#     num_classes: 2
+#     max_node_degree:  26
+#     node_features: pde_on-31
+#     total_dataset: 1113
+#     splits:
+#         - train_100_test_20
+#         - train_850_test_250
+#         - train_1000_test_100
+proteins_full_no_pos:
+  dataset_group: custom
+  dataset_name: proteins_full
+  layers_num: 3
+  out_dim: 2 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 31 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Model specific params
+  # ChebConv & GraphConv
+  cheb_K: 3
+  cheb_out_sf: 2
+  cheb_hidden_sf: 3
+  graph_out_sf: 2
+  graph_hidden_sf: 4
+  # GCNConv & QGRN
+  gcn_hidden_sf: 6 
+  gcn_out_sf: 2
+  # GeneralConv & GATv2Conv
+  general_hidden_heads: 2
+  general_out_sf: 5
+  general_hidden_sf: 2
+  gatv2_hidden_heads: 3
+  gatv2_out_sf: 1
+  gatv2_hidden_sf: 1
+  # SGConv & GenConv
+  sg_K: 5
+  sg_out_sf: 4
+  sg_hidden_sf: 5
+  gen_out_sf: 3
+  gen_hidden_sf: 2
+  # TransformerConv
+  transf_hidden_heads: 3
+  transf_out_sf: 1
+  transf_hidden_sf: 1
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_100_test_20:   https://dl.dropboxusercontent.com/scl/fi/0s3pq39bo18exm2gfz8ay/proteins_full.pkl?rlkey=0hxg4roi8rh2n89dzh53axl13&dl=0
+    train_850_test_250:  https://dl.dropboxusercontent.com/scl/fi/1e8iqcga032mx6u44vrf1/proteins_full.pkl?rlkey=u6in9pdjpniqptwr39d7i8438&dl=0
+    train_1000_test_100: https://dl.dropboxusercontent.com/scl/fi/3cyvyyan0ttbywldsq1c1/proteins_full.pkl?rlkey=5sw1hnik2or76vrzxth4cca9n&dl=0
+
+# Synthie:
+#     num_classes: 4
+#     max_node_degree:  21
+#     node_features: pde_on-16, pde_off-16
+#     total_dataset: 400
+#     splits:
+#         - train:100_test:20
+#         - train:320_test:80
+synthie_no_pos: 
+  dataset_group: custom
+  dataset_name: synthie
+  layers_num: 3
+  out_dim: 4 # num_classes
+  num_sub_kernels: 7 # <= max_node_degree
+  in_channels: 16 # node_features
+  hidden_channels: 32
+  out_channels: 64
+  pos_descr_dim: -1
+  edge_attr_dim: -1
+  # Model specific params
+  # ChebConv & GraphConv
+  cheb_K: 3
+  cheb_out_sf: 2
+  cheb_hidden_sf: 3
+  graph_out_sf: 2
+  graph_hidden_sf: 4
+  # GCNConv & QGRN
+  gcn_hidden_sf: 6 
+  gcn_out_sf: 2
+  # GeneralConv & GATv2Conv
+  general_hidden_heads: 3
+  general_out_sf: 3
+  general_hidden_sf: 2
+  gatv2_hidden_heads: 3
+  gatv2_out_sf: 1
+  gatv2_hidden_sf: 1
+  # SGConv & GenConv
+  sg_K: 5
+  sg_out_sf: 4
+  sg_hidden_sf: 5
+  gen_out_sf: 3
+  gen_hidden_sf: 2
+  # TransformerConv
+  transf_hidden_heads: 3
+  transf_out_sf: 1
+  transf_hidden_sf: 1
+  # Dataset loc
+  download_url: # Used if dataset split for this dataset doesn't exist
+    train_100_test_20: https://dl.dropboxusercontent.com/scl/fi/eyw8n9pge2ov784dzm4xn/synthie.pkl?rlkey=6jd12ckld2oowjjo4njqapegb&dl=0
+    train_320_test_80: https://dl.dropboxusercontent.com/scl/fi/sadg4ztpryrmqq0ehqa4n/synthie.pkl?rlkey=4mce8t33mxmvyh985t91bmnte&dl=0
