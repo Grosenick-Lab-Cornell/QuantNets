@@ -17,20 +17,19 @@ pip install wget torch-geometric torch-cluster torch-sparse torch-scatter
 
 # Project Structure
 In the root of the folder, there are three groups of directories:
-1. `Experiments` (such as graph_classification, node_classification, eeg_autoencoder etc.) which contains scripts for generating empirical results
-2. `Libraries` (including cnn, qgrn, qgcn, sgcn etc.) which contains the models and neural architectures, referenced by 'Experiment' scripts
-3. `Utils` (utility directories like util, flops_counter) which contain helper functions used by the scripts
+1. **`Experiments`** (such as graph_classification, node_classification, eeg_autoencoder etc.) which contains scripts for generating empirical results
+2. **`Libraries`** (including cnn, qgrn, qgcn, sgcn etc.) which contains the models and neural architectures, referenced by 'Experiment' scripts
+3. **`Utils`** (utility directories like util, flops_counter) which contain helper functions used by the scripts
    - flops_counter - a third party library used for computing model complexity (library was modified to support our custom graph networks)
-4. `Custom Data` (i.e., custom_data) - custom_data directory has instructions for generating benchmark graph datasets used in the paper
-5. `Extraneous` (i.e., cache etc.) - cache holds all other scripts, google colab notebook templates etc.
+4. **`Custom Data`** (i.e., custom_data) - custom_data directory has instructions for generating benchmark graph datasets used in the paper
+5. **`Extraneous`** (i.e., cache etc.) - cache holds all other scripts, google colab notebook templates etc.
 
-`Experiments`:
+**`Experiments`**:
 The core contents (leaf nodes) in these directories are either python notebooks or runnable scripts: in the latter, the folder is organized as shown below:
-<leaf-node>
--> datasets.yaml (contains the datasets configuration for a given experiment - some of these configs are model specific parameters which are defined to ensure iso-model parameters across varying models)
--> data.splits.yaml (contains the train-test splits for the experiment; you can refer to the datasets.yaml file's `download_url` key for a list of supported train-test splits for any given dataset )
--> run.settings.yaml (contains all other configurable settings for the run, such as epochs[name: epochs], learning rate [name: lrs], how many times experiments should be repeated [name: runs] etc.)
--> run_experiment*.py (primary script to be run to generate empirical results included in the paper)
+- *`_datasets.yaml`* (contains the datasets configuration for a given experiment - some of these configs are model specific parameters which are defined to ensure iso-model parameters across varying models)
+- *`data.splits.yaml`* (contains the train-test splits for the experiment; you can refer to the datasets.yaml file's `download_url` key for a list of supported train-test splits for any given dataset )
+- *`run.settings.yaml`* (contains all other configurable settings for the run, such as epochs[name: epochs], learning rate [name: lrs], how many times experiments should be repeated [name: runs] etc.)
+- *`run_experiment*.py`* (primary script to be run to generate empirical results included in the paper)
 
 # Standard Datasets
 To evaluate on full standard image dataset (i.e., MNIST, FashionMNIST, CIFAR10), please run the below to first download and 
@@ -45,7 +44,7 @@ python3 ./graph_classification/generate_rawgraph_data.py -d FashionMNIST
 python3 ./graph_classification/generate_rawgraph_data.py -d CIFAR10
 ```
 
-**NOTE**:
+##### **NOTE**:
 - All empirical results generated will be populated into `./Experiments` directory
 - Adding the flag `--profilemodels` to run_experiment*.py's invocation will print out the model parameters, flops and wall clock times etc.
 - Adding the flag `--notraineval` to run_experiment*.py's invocation will turn off evaluating training accuracies on the models
