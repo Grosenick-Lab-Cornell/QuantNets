@@ -15,7 +15,7 @@ Supported Datasets:
 - Synthie
 
 **STEPS**:
-1. Download the datasets from the parent repository: https://ls11-www.cs.tu-dortmund.de/staff/morris/graphkerneldatasets
+1. Download the datasets from the parent repository: [TUDatasets](https://ls11-www.cs.tu-dortmund.de/staff/morris/graphkerneldatasets)
 2. Unzip the files and copy the unzipped dataset folder into the project directory: <root>/Dataset/Raw/*
 3. Finally run through the datasets_parsing_functions.ipynb to generate the geometric datasets (they'll be populated into <root>/Dataset/Raw/Generated/*)
 4. The result of 3. are pickle files containing data split into various train:test splits, named according to the convention: train_<X>_test_<Y>_struct_<dataset-name>_graph_data_pde=<?=yes or no>; pde -> positional descriptors
